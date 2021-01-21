@@ -25,6 +25,9 @@ textarea{
   white-space: pre-wrap;
 }
 
+::placeholder {
+  color: white;
+}
 .time-block{
   text-align: center;
   border-radius: 15px;
