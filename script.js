@@ -34,15 +34,15 @@ var toDoInput4 = localStorage.getItem("hour-4");
 var toDoInput5 = localStorage.getItem("hour-5");
 
 // the values from local storage are displayed th textarea by using id variables. May be empty.
-toDoInput9.val(timeBlock9);
-toDoInput10.val(timeBlock10);
-toDoInput11.val(timeBlock11);
-toDoInput12.val(timeBlock12);
-toDoInput1.val(timeBlock1);
-toDoInput2.val(timeBlock2);
-toDoInput3.val(timeBlock3);
-toDoInput4.val(timeBlock4);
-toDoInput5.val(timeBlock5);
+timeBlock9.val(toDoInput9);
+timeBlock10.val(toDoInput10);
+timeBlock11.val(toDoInput11);
+timeBlock12.val(toDoInput12);
+timeBlock1.val(toDoInput1);
+timeBlock2.val(toDoInput2);
+timeBlock3.val(toDoInput3);
+timeBlock4.val(toDoInput4);
+timeBlock5.val(toDoInput5);
 
 
 
@@ -50,4 +50,24 @@ function displayCurrentDate() {
     $("#currentDay").text(currentDate);
   }
 
+// Function to store user input to local storage when a user clicks the save icon
+  $(".save").on("click", function (event) {
+    // stops page from refreshing on button click
+    event.preventDefault();
+
+    // selects the previous element from the save button, which is the to-do element
+    var toDoElement = $(this).prev();
+
+    // variable to get the ID element of the hour (9-17)
+    var hourElementId = toDoElement.attr("id");
+    console.log(hourElementId);
+
+    // toDo stores the text content of whatever is entered in the toDoElement
+    var toDo = toDoElement.val();
+    console.log(toDo);
+    
+    // Saves the user input if applicable corresponding to its hour ID. This is referenced in our "toDoInput[i]" variables above
+    localStorage.setItem(hourElementId, toDo);
+    
+});
   displayCurrentDate();
