@@ -1,11 +1,17 @@
+// set up Luxon's DateTime w/CDN
 var DateTime = luxon.DateTime;
-var dt = DateTime.fromISO(new Date().toISOString());
-console.log(dt.toFormat('yyyy/MM/dd'));
-var dt2 = DateTime.fromJSDate(new Date());
-console.log(dt2.toFormat('yyyy/MM/dd'));
 
-var currentDate = dt.toLocaleString(DateTime.DATETIME_MED);
+// Get the local current date and time
+var dt = DateTime.local();
+
+// store the current date as a string, displaying month, date, and year
+var currentDate = dt.toLocaleString(DateTime.DATE_MED);
+var currentHour = dt.hour;
+console.log(dt.toLocaleString(DateTime.TIME_SIMPLE));
 console.log(currentDate);
+console.log(currentHour);
+
+
 
 function displayCurrentDate() {
     $("#currentDay").text(currentDate);
