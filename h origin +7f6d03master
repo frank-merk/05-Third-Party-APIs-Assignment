@@ -1,0 +1,65 @@
+[33mcommit c1d28b9b4d5078e6a8fadbe8c428fee05902c1ba[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Frank Merchlewitz <jlimhb@gmail.com>
+Date:   Thu Jan 21 09:10:02 2021 -0600
+
+    added function to color classes based on relation to current time (past, present, future)
+
+[33mcommit cfd8f918d5480c279c911917fef93f22de3f0491[m
+Author: Frank Merchlewitz <jlimhb@gmail.com>
+Date:   Thu Jan 21 00:38:26 2021 -0600
+
+    Fixed classes that had matching errors and fixed a couple typos
+
+[33mcommit 175a6a745abf34c693bb2aea6e02f746f1bb5980[m
+Author: Frank Merchlewitz <jlimhb@gmail.com>
+Date:   Thu Jan 21 00:33:47 2021 -0600
+
+    Added an onclick fucntion that stores user input when they click the save icon
+
+[33mcommit d5a8872b4fa718036b5e4588ed31441377aa7ced[m
+Author: Frank Merchlewitz <jlimhb@gmail.com>
+Date:   Wed Jan 20 23:45:52 2021 -0600
+
+    Setting variables for the time block display elements, saved data from local storage, and time block values
+
+[33mcommit 0ee1a74f255db807b1df953339f1222e407cd139[m
+Author: Frank Merchlewitz <jlimhb@gmail.com>
+Date:   Wed Jan 20 23:36:23 2021 -0600
+
+    Changed class block to time-block to match pseudo code
+
+[33mcommit 0ae7ff1affbde9e6e287319f3eeea49b075d7e0c[m
+Author: Frank Merchlewitz <jlimhb@gmail.com>
+Date:   Wed Jan 20 23:32:06 2021 -0600
+
+    Created Bootstrap grid of timeblocks in the HTML doc
+
+[33mcommit fef96d2c30547a179e1f5763411d061dfd607e1e[m
+Author: Frank Merchlewitz <jlimhb@gmail.com>
+Date:   Wed Jan 20 23:19:23 2021 -0600
+
+    Set up simpler variables for a local date string and a way to get the current hour as an integer
+
+[33mcommit 7e38318cdcdf81e97fb13643b2be3a5c138b07ac[m
+Author: Frank Merchlewitz <jlimhb@gmail.com>
+Date:   Wed Jan 20 17:51:45 2021 -0600
+
+    Figured out Luxon to the point that I could write the local current date to the page
+
+[33mcommit 79b61da9aff12053acdd0a2ebd0c98d4fdca40d3[m
+Author: Frank Merchlewitz <jlimhb@gmail.com>
+Date:   Wed Jan 20 17:34:23 2021 -0600
+
+    playing with luxon api
+
+[33mcommit 22b6a4b8b7b599b95642db7a1ad7e29bf2c0d761[m
+Author: Frank Merchlewitz <jlimhb@gmail.com>
+Date:   Wed Jan 20 17:01:47 2021 -0600
+
+    Rearrange and added JS file
+
+[33mcommit a0448de7bc1c30eacdc28bbcf162c3ce8c6e5b57[m
+Author: frank-merk <jlimhb@gmail.com>
+Date:   Wed Jan 20 16:58:39 2021 -0600
+
+    Initial commit
