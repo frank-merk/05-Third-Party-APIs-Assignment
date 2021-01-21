@@ -12,7 +12,6 @@ console.log(currentDate);
 console.log(currentHour);
 
 
-
 function displayCurrentDate() {
     $("#currentDay").text(currentDate);
   }
