@@ -44,14 +44,45 @@ timeBlock3.val(toDoInput3);
 timeBlock4.val(toDoInput4);
 timeBlock5.val(toDoInput5);
 
+function getTime() {
 
+    $(".time-block").each(function () {
+
+        var hour = parseInt($(this).attr("id"));
+
+        if (hour < currentHour) {
+            $(this).addClass("past");
+        }
+
+        else if (hour === currentHour) {
+            // removes grey to blocks
+            $(this).removeClass("past");
+            // adds red to blocks
+            $(this).addClass("present");
+        }
+
+        // else statement to ditermin if in the future's
+        else {
+            // removes grey to blocks
+            $(this).removeClass("past");
+            // removes red to blocks
+            $(this).removeClass("present");
+            // adds green to blocks
+            $(this).addClass("future");
+        }
+
+    });
+
+};
+
+getTime();
 
 function displayCurrentDate() {
     $("#currentDay").text(currentDate);
   }
 
 // Function to store user input to local storage when a user clicks the save icon
-  $(".save").on("click", function (event) {
+  $(".saveBtn").on("click", function (event) {
     // stops page from refreshing on button click
     event.preventDefault();
 
