@@ -25,6 +25,7 @@ textarea{
   white-space: pre-wrap;
 }
 
+/* just updated the placeholder attribute */
 ::placeholder {
   color: white;
   opacity: 80%;

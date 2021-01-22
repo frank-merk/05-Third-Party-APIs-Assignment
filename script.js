@@ -7,9 +7,14 @@ var dt = DateTime.local();
 // store the current date as a string, displaying month, date, and year
 var currentDate = dt.toLocaleString(DateTime.DATE_MED);
 var currentHour = dt.hour;
+
+// Debugging
 console.log(dt.toLocaleString(DateTime.TIME_SIMPLE));
 console.log(currentDate);
 console.log(currentHour);
+
+// Write the date to the console, as "MONTH dd, yyyy"
+$("#currentDay").text(currentDate);
 
 // Variable for the timeblock text areas by hour
 var timeBlock9 = $("#hour-9");
@@ -46,38 +51,34 @@ timeBlock5.val(toDoInput5);
 
 function getTime() {
 
+    // go through each text area element with class timeblock...
     $(".time-block").each(function () {
-
+        // variable hour that stores the id as an integer for our timeblocks (9-17 for the workday)
         var hour = parseInt($(this).attr("id"));
 
+        // if the current hour is less than the time-block's hour...
         if (hour < currentHour) {
+            // give it a class of "past", colored grey on the calendar
             $(this).addClass("past");
         }
-
+        // if the current time matches the timeblock id...
         else if (hour === currentHour) {
-
+            // strip the "past" class...
             $(this).removeClass("past");
-
+            // and add the present "red" class.
             $(this).addClass("present");
 
         } else {
-        
+            // otherwise, remove either class of "past" or "present" if they exist...
             $(this).removeClass("past");
-           
             $(this).removeClass("present");
-            
+            // and give them the class "future", colored green.
             $(this).addClass("future");
         }
-
     });
-
 };
 
 getTime();
-
-function displayCurrentDate() {
-    $("#currentDay").text(currentDate);
-  }
 
 // Function to store user input to local storage when a user clicks the save icon
   $(".saveBtn").on("click", function (event) {
@@ -99,4 +100,3 @@ function displayCurrentDate() {
     localStorage.setItem(hourElementId, toDo);
     
 });
-  displayCurrentDate();
