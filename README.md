@@ -2,8 +2,8 @@
 
 ## Links
 
--[Working Project](https://frank-merk.github.io/05-Third-Party-APIs-Assignment/)  
--[Luxon](https://moment.github.io/luxon/index.html)  
+*[Working Project](https://frank-merk.github.io/05-Third-Party-APIs-Assignment/)  
+*[Luxon](https://moment.github.io/luxon/index.html)  
 
 ## Description
 
