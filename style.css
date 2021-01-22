@@ -27,6 +27,7 @@ textarea{
 
 ::placeholder {
   color: white;
+  opacity: 80%;
 }
 .time-block{
   text-align: center;
