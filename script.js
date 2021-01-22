@@ -33,7 +33,7 @@ var toDoInput3 = localStorage.getItem("hour-3");
 var toDoInput4 = localStorage.getItem("hour-4");
 var toDoInput5 = localStorage.getItem("hour-5");
 
-// the values from local storage are displayed th textarea by using id variables. May be empty.
+// the values from local storage are displayed in the textarea by using id variables. May be empty.
 timeBlock9.val(toDoInput9);
 timeBlock10.val(toDoInput10);
 timeBlock11.val(toDoInput11);
@@ -55,19 +55,17 @@ function getTime() {
         }
 
         else if (hour === currentHour) {
-            // removes grey to blocks
-            $(this).removeClass("past");
-            // adds red to blocks
-            $(this).addClass("present");
-        }
 
-        // else statement to ditermin if in the future's
-        else {
-            // removes grey to blocks
             $(this).removeClass("past");
-            // removes red to blocks
+
+            $(this).addClass("present");
+
+        } else {
+        
+            $(this).removeClass("past");
+           
             $(this).removeClass("present");
-            // adds green to blocks
+            
             $(this).addClass("future");
         }
 
